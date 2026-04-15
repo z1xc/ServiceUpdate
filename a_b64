@@ -1,0 +1,6 @@
+' RunPSFromVBS.vbs
+Dim shell, encodedCommand
+encodedCommand = "YQBuAHkAIABlAG4AYwBvAGQAZQBkACAAYwBvAG0AbQBhAG4AZAAgAGgAZQByAGUA"  ' Your encoded string here
+
+Set shell = CreateObject("WScript.Shell")
+shell.Run "powershell.exe -ExecutionPolicy Bypass -EncodedCommand " & encodedCommand, 0, False
